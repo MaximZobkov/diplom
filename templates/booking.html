@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book a Service</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body>
+    <h1>Book a Service</h1>
+    <form action="{{ url_for('book') }}" method="post">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="date">Date:</label>
+        <input type="date" id="date" name="date" required>
+
+        <label for="time">Time:</label>
+        <input type="time" id="time" name="time" required>
+
+        <label for="service">Service:</label>
+        <select id="service" name="service" required>
+            <option value="exterior_wash">Exterior Wash</option>
+            <option value="interior_cleaning">Interior Cleaning</option>
+            <option value="full_detailing">Full Detailing</option>
+        </select>
+
+        <button type="submit">Book</button>
+    </form>
+</body>
+</html>
