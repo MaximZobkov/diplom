@@ -1,12 +1,7 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dashboard</title>
-</head>
-<body>
-    <h1>Welcome to your Dashboard, {{ current_user.username }}!</h1>
-    <a href="{{ url_for('logout') }}">Logout</a>
-</body>
-</html>
+{% extends 'base.html' %}
+
+{% block title %}Панель управления{% endblock %}
+
+{% block content %}
+<h1>Добро пожаловать на вашу панель управления, {{ current_user.username }}!</h1>
+{% endblock %}

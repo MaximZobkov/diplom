@@ -1,14 +1,9 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Confirmation</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
-</head>
-<body>
-    <h1>Booking Confirmation</h1>
-    <p>Your booking has been confirmed. Thank you!</p>
-    <a href="{{ url_for('index') }}">Back to Home</a>
-</body>
-</html>
+{% extends 'base.html' %}
+
+{% block title %}Подтверждение{% endblock %}
+
+{% block content %}
+<h1>Подтверждение бронирования</h1>
+<p>Ваше бронирование подтверждено. Спасибо!</p>
+<a href="{{ url_for('index') }}">Вернуться на главную</a>
+{% endblock %}

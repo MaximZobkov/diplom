@@ -1,9 +1,12 @@
-from app import db
+from . import SqlAlchemyBase
+from sqlalchemy import Column, Integer, String, Date, Time
 
-class Booking(db.Model):
-    id = db.Column(db.Integer, primary_key=True)
-    name = db.Column(db.String(100), nullable=False)
-    email = db.Column(db.String(100), nullable=False)
-    date = db.Column(db.Date, nullable=False)
-    time = db.Column(db.Time, nullable=False)
-    service = db.Column(db.String(100), nullable=False)
+class Booking(SqlAlchemyBase):
+    __tablename__ = 'bookings'
+
+    id = Column(Integer, primary_key=True)
+    name = Column(String(100), nullable=False)
+    email = Column(String(100), nullable=False)
+    date = Column(Date, nullable=False)
+    time = Column(Time, nullable=False)
+    service = Column(String(100), nullable=False)
